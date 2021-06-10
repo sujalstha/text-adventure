@@ -14,6 +14,9 @@ x = 4
 
 while True:
     global second
+    global loop
+    global grating_inp
+
     while x == 4:
         if x == 4:
             print("---------------------------------------------------------")
