@@ -13,6 +13,7 @@ time.sleep(3)
 x = 4
 
 while True:
+    global second
     while x == 4:
         if x == 4:
             print("---------------------------------------------------------")
@@ -47,5 +48,51 @@ while True:
             print("Welcome to the Unofficial Python Version of Zork. Your mission is to find a Jade Statue.")
         else:
             print("---------------------------------------------------------")
+
+            # Southwest Loop
+            while loop == 8:
+                if loop == 8:
+                    print("---------------------------------------------------------")
+                    print("This is a forest, with trees in all directions. To the east, there appears to be sunlight.")
+                    forest_inp = input("What do you do? ")
+
+                if forest_inp.lower() == ("go west"):
+                    print("---------------------------------------------------------")
+                    print("You would need a machete to go further west.")
+                elif forest_inp.lower() == ("go north"):
+                    print("---------------------------------------------------------")
+                    print("The forest becomes impenetrable to the North.")
+                elif forest_inp.lower() == ("go south"):
+                    print("---------------------------------------------------------")
+                    print("Storm-tossed trees block your way.")
+                elif forest_inp.lower() == ("go east"):
+                    loop = 9
+                else:
+                    print("---------------------------------------------------------")
+
+            # East Loop and Grating Input
+            while loop == 9:
+                if loop == 9:
+                    print("---------------------------------------------------------")
+                    print("You are in a clearing, with a forest surrounding you on all sides. A path leads south.")
+                    print("There is an open grating, descending into darkness.")
+                    grating_inp = input("What do you do? ")
+
+                if grating_inp.lower() == ("go south"):
+                    print("---------------------------------------------------------")
+                    print("You see a large ogre and turn around.")
+                elif grating_inp.lower() == ("descend grating"):
+                    loop = 10
+                else:
+                    print("---------------------------------------------------------")
+
+            # Grating Loop and Cave Input
+            while loop == 10:
+                if loop == 10:
+                    print("---------------------------------------------------------")
+                    print("You are in a tiny cave with a dark, forbidding staircase leading down.")
+                    print("There is a skeleton of a human male in one corner.")
+                    cave_inp = input("What do you do? ")
+
 
             
